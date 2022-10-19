@@ -34,11 +34,14 @@ basic.forever(function () {
         villano_2.delete()
         game.addScore(1)
     }
-    if (heroe.isTouching(villano_2)) {
+    if (heroe.isTouching(villano_3)) {
         villano_3.delete()
         game.addScore(1)
     }
     if (game.score() == 3) {
-    	
+        basic.clearScreen()
+        music.playMelody("A F E F D G E F ", 120)
+        basic.showString("you win")
+        control.reset()
     }
 })
